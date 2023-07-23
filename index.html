@@ -6,38 +6,45 @@
     <title>Document</title>
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="title">
-      <h1>Command Line Echo</h1>
-      <h1>MathTools With Input Validation</h1>
-      <h6>
-        入力フォーマット: <br />
-        "MTools [add|subtract|multiply|divide|exp|log|abs|sqrt|round|floor|ceil]
-        [Number],[Number]"
-      </h6>
-      <h6>演算によって、必要な引数の数は異なります。</h6>
-      <h6>例: MTools add 3,2 / MTools sqrt 49</h6>
-    </div>
-    <div class="container input-group py-2">
-      <div
-        id="CLIOutputDiv"
-        class="container vh-60 bg-dark p-3 text-white"
-      ></div>
-      <input
-        type="text"
-        id="CLITextInput"
-        class="form-control"
-        placeholder="type any command"
-        aria-label="Username"
-        aria-describedby="addon-wrapping"
-      />
-    </div>
+    <!-- output, input-field  -->
+    <main id="container">
+      <div id="terminal">
+        <!-- Terminal Bar -->
+        <section id="terminal__bar">
+          <div id="bar__buttons">
+            <button class="bar__button" id="bar__button--exit">&#10005;</button>
+            <button class="bar__button">&#9472;</button>
+            <button class="bar__button">&#9723;</button>
+          </div>
+          <p id="bar__user">fobabs@ubuntu: ~</p>
+        </section>
+        <section id="terminal__body">
+          <div id="terminal__prompt">
+            <span id="terminal__prompt--user">student@recursionist:</span>
+            <span id="terminal__prompt--location">~</span>
+            <span id="terminal__prompt--bling">$</span>
+          </div>
+          <div id="CLIOutputDiv"></div>
+        </section>
+        <div class="container mt-auto">
+          <input
+            type="text"
+            id="CLITextInput"
+            class="form-control"
+            placeholder="type any command"
+            aria-label="Username"
+            aria-describedby="addon-wrapping"
+          />
+        </div>
+      </div>
+    </main>
     <script src="app.js"></script>
   </body>
 </html>
